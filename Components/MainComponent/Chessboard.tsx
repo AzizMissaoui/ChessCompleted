@@ -475,9 +475,9 @@ const clickhandlermove=(pos:Array<any>):void=>{
            fakeboard[oldpieceposition[0]][oldpieceposition[1]].gridImage= fakeboard[pos[0]][pos[1]].gridImage;
            fakeboard[oldpieceposition[0]][oldpieceposition[1]].piecetype=fakeboard[pos[0]][pos[1]].piecetype;
            fakeboard[oldpieceposition[0]][oldpieceposition[1]].type=fakeboard[pos[0]][pos[1]].type;
-           fakeboard[pos[0]][pos[1]].gridImage="none"; 
-           fakeboard[pos[0]][pos[1]].piecetype="none"; 
-           fakeboard[pos[0]][pos[1]].type="none";
+           fakeboard[pos[0]][pos[1]].gridImage=preservedpiece.gridImage; 
+           fakeboard[pos[0]][pos[1]].piecetype=preservedpiece.piecetype; 
+           fakeboard[pos[0]][pos[1]].type=preservedpiece.type;
           }else if (whiteischecked===false){
             Setblackturn(true);
             Setwhiteturn(false);
